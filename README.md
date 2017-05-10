@@ -1,5 +1,7 @@
 **File-ingestor** is a tool that automatically and continuously monitors folders on the filesystem and synchronizes them with an AWS S3 bucket. The tool supports monitoring mulitiple file paths on the local filesystem. The heavy lifting in the tool is performed by the AWS CLI. Synchronization is performed on a near continuous basis through job scheduling. The tool currently only supports Windows, but we expect to add a version for Linux.
 
+File synchronization is one way. The S3 bucket will mirror whatever is present on the local filesystem.
+
 Prerequisites
 ============
 The configuration of file-ingestor requires AWS keys, the name of a bucket, the region where your bucket is, and the path from which you want to ingest. So, you should do the following before download and installation:
@@ -18,6 +20,8 @@ The configuration of file-ingestor requires AWS keys, the name of a bucket, the 
     ]
 }
 ```
+
+
 
 Installation varies by your target system operating system:
 * [Windows installation](Windows/README.md)
