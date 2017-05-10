@@ -19,6 +19,7 @@ if (!(test-path $ingestor_home)) {
 #cpi .\ingest-files.* $ingestor_home
 invoke-webrequest https://raw.githubusercontent.com/Cimpress-MCP/file-ingestor/master/Windows/ingest-files.ps1 -OutFile $ingestor_home\ingest-files.ps1
 invoke-webrequest https://raw.githubusercontent.com/Cimpress-MCP/file-ingestor/master/Windows/ingest-files.bat -OutFile $ingestor_home\ingest-files.bat
+invoke-webrequest https://raw.githubusercontent.com/Cimpress-MCP/file-ingestor/master/Windows/uninstall.ps1 -OutFile $ingestor_home\uninstall.ps1
 
 #configure
 if (!(test-path $ingestor_home\config.json)) {
