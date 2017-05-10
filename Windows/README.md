@@ -1,27 +1,5 @@
-Installation
-============
-
-Prerequisites
-------------
-The configuration of file-ingestor requires AWS keys, the name of a bucket, the region where your bucket is, and the path from which you want to ingest. So, you should do the following before download and installation:
-* Know your AWS access key id and secret. We recommend creating a distinct user for this purpose and limiting access solely to the S3 bucket
-* Have created the S3 bucket
-* Configured your user in IAM to have access to the S3 bucket only. For example,
-```
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": "s3:*",
-            "Resource": "arn:aws:s3:::file-ingestor-proto/*"
-        }
-    ]
-}
-```
-
-Download, Install, and Configure
---------
+Windows Download, Install, and Configure
+===
 
 To install this tool, open a Powershell command window *as Administrator* and run the following command:
 ```
@@ -35,6 +13,7 @@ The script will do the following things:
 * Install awscli, if you do not already have it
 * Create a folder, `ProgramData\file-ingestor` and place the main script there.
 * Prompt you for configuration information (AWS keys, bucket name, source path, etc.) in order to setup the config.json file, which also goes into `ProgramData\file-ingestor`
+* Create a scheduled task to run every minute to synchronize files.
 
 Additional Configuration options
 ---
