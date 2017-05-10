@@ -32,7 +32,7 @@ if (!(test-path $ingestor_home\config.json)) {
   $config.paths = ,$path
   $config.exclude = "*.bak",".git/*"
 
-  #$config | convertto-json | out-file (join-path $ingestor_home 'config.json') -Encoding ascii
+  $config | convertto-json | out-file (join-path $ingestor_home 'config.json') -Encoding ascii
 }
 
 #create scheduled task
