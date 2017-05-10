@@ -25,7 +25,7 @@ Download, Install, and Configure
 
 To install this tool, open a Powershell command window *as Administrator* and run the following command:
 ```
-invoke-webrequest https://raw.githubusercontent.com/apex/apex/master/file-ingestor/Windows/install.ps1 -UseBasicParsing | powershell
+invoke-webrequest https://raw.githubusercontent.com/Cimpress-MCP/file-ingestor/master/Windows/install.ps1 -UseBasicParsing | powershell
 ```
 
 When prompted, allow the script to make changes to your system.
