@@ -15,7 +15,10 @@ The configuration of file-ingestor requires AWS keys, the name of a bucket, the 
         {
             "Effect": "Allow",
             "Action": "s3:*",
-            "Resource": "arn:aws:s3:::file-ingestor-proto/*"
+            "Resource": [
+              "arn:aws:s3:::file-ingestor-proto/*",
+              "arn:aws:s3:::file-ingestor-proto",
+            ]
         }
     ]
 }
