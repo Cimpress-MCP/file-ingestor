@@ -3,10 +3,10 @@ Windows Download, Install, and Configure
 
 To install this tool, open a Powershell command window *as Administrator* and run the following command:
 ```
-invoke-webrequest https://raw.githubusercontent.com/Cimpress-MCP/file-ingestor/master/Windows/install.ps1 -UseBasicParsing | powershell
+invoke-webrequest https://raw.githubusercontent.com/Cimpress-MCP/file-ingestor/master/Windows/install.ps1 -UseBasicParsing -outfile .\file-ingestor-install.ps1; .\file-ingestor-install.ps1
 ```
 
-When prompted, allow the script to make changes to your system.
+If prompted, allow the script to make changes to your system.
 
 The script will do the following things:
 * Install Python, if you do not already have it
