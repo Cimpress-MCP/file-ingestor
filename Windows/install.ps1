@@ -3,7 +3,10 @@ $p = &{pip -V} 2>&1
 if ($p -is [System.Management.Automation.ErrorRecord]) {
   invoke-webrequest https://www.python.org/ftp/python/3.6.1/python-3.6.1-amd64-webinstall.exe -UseBasicParsing -OutFile .\python-3.6.1-amd64-webinstall.exe
   start .\python-3.6.1-amd64-webinstall.exe -ArgumentList /passive,PrependPath=1,Include_doc=0,InstallAllUsers=1,SimpleInstall=1,Include_test=0,Include_tcltk=0 -wait
+  #make python available in this session
+  $env:Path = "C:\Program Files\Python36\Scripts;$($env:Path)"
 }
+
 #install awscli
 $p = pip show awscli
 if (!$?) {
